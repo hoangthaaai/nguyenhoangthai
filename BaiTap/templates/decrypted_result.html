@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kết quả giải mã</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <div class="card p-4 shadow">
+      <h2 class="mb-4 text-center">🔓 Ảnh đã giải mã</h2>
+      <div class="text-center">
+        <img src="data:image/jpeg;base64,{{ image_data }}" class="img-fluid rounded border" alt="Decrypted Image" />
+      </div>
+      <div class="mt-4 text-center">
+        {% if valid %}
+          <div class="alert alert-success">✅ Chữ ký hợp lệ – ảnh nguyên vẹn</div>
+        {% else %}
+          <div class="alert alert-danger">❌ Chữ ký không hợp lệ – ảnh có thể bị thay đổi!</div>
+        {% endif %}
+      </div>
+      <div class="text-center mt-3">
+        <a href="/" class="btn btn-primary">← Quay lại trang chủ</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
